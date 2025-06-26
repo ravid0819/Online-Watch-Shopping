@@ -1,0 +1,107 @@
+CREATE TABLE [dbo].[address] (
+    [Id]        INT          IDENTITY (1, 1) NOT NULL,
+    [cus_id]    INT          NULL,
+    [invoice]   VARCHAR (50) NULL,
+    [full_name] VARCHAR (50) NULL,
+    [city]      VARCHAR (50) NULL,
+    [state]     VARCHAR (50) NULL,
+    [pincode]   VARCHAR (50) NULL,
+    [address]   VARCHAR (50) NULL,
+    [number]    VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[bill] (
+    [bill_Id]      INT          IDENTITY (1, 1) NOT NULL,
+    [ship_id]      INT          NULL,
+    [cus_id]       INT          NULL,
+    [pr_id]        INT          NULL,
+    [invoice]      VARCHAR (50) NULL,
+    [qty]          INT          NULL,
+    [total_amount] INT          NULL,
+    [pay_status]   VARCHAR (50) NULL,
+    [date_time]    VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([bill_Id] ASC)
+);
+
+CREATE TABLE [dbo].[cart] (
+    [cart_id]     INT IDENTITY (1, 1) NOT NULL,
+    [cus_id]      INT NOT NULL,
+    [pr_id]       INT NOT NULL,
+    [quantity]    INT NOT NULL,
+    [total_price] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([cart_id] ASC)
+);
+
+CREATE TABLE [dbo].[category] (
+    [cat_id]   INT          IDENTITY (1, 1) NOT NULL,
+    [category] VARCHAR (50) NULL,
+    [status]   VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([cat_id] ASC)
+);
+
+CREATE TABLE [dbo].[client] (
+    [user_id]  INT           IDENTITY (1, 1) NOT NULL,
+    [name]     VARCHAR (100) NOT NULL,
+    [email]    VARCHAR (100) NOT NULL,
+    [Password] VARCHAR (100) NOT NULL,
+    PRIMARY KEY CLUSTERED ([user_id] ASC)
+);
+
+CREATE TABLE [dbo].[orderdetail] (
+    [order_id]  INT          IDENTITY (1, 1) NOT NULL,
+    [proid]     INT          NULL,
+    [custid]    INT          NULL,
+    [invoice]   VARCHAR (50) NULL,
+    [orderdate] DATETIME     NULL,
+    [totalqty]  INT          NULL,
+    PRIMARY KEY CLUSTERED ([order_id] ASC)
+);
+
+CREATE TABLE [dbo].[pay_inquire] (
+    [pay_id]   INT          IDENTITY (1, 1) NOT NULL,
+    [invoice ] VARCHAR (50) NULL,
+    [subject]  VARCHAR (50) NULL,
+    [message]  VARCHAR (50) NULL,
+    [urgency]  VARCHAR (50) NULL,
+    [filepath] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([pay_id] ASC)
+);
+
+CREATE TABLE [dbo].[product] (
+    [product_id] INT           IDENTITY (10000, 1) NOT NULL,
+    [cat_id]     INT           NOT NULL,
+    [product]    VARCHAR (MAX) NULL,
+    [price]      INT           NOT NULL,
+    [color]      VARCHAR (50)  NULL,
+    [image]      VARCHAR (MAX) NULL,
+    [desc]       VARCHAR (MAX) NULL,
+    [status]     VARCHAR (50)  NULL,
+    PRIMARY KEY CLUSTERED ([product_id] ASC)
+);
+
+1	Featured	Active
+2	products	Active
+3	new	Active
+NULL	NULL	NULL
+
+
+insert into product (Coolumn name) values ("ggdsg"),
+
+
+SET IDENTITY_INSERT [dbo].[product] ON
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10000, 2, N'JazzMaster', 79000, N'#000000', N'~/Admin/Upload/featured1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10001, 2, N'Spirit rose', 127000, N'#000000', N'~/Admin/Upload/product1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10002, 2, N'Ingersoll', 21000, N'#000000', N'~/Admin/Upload/featured2.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10003, 2, N'Khaki pilot', 115000, N'#000000', N'~/Admin/Upload/product2.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10004, 2, N'Jubilee black', 75000, N'#000000', N'~/Admin/Upload/product3.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10005, 2, N'Jubilee black', 55000, N'#000000', N'~/Admin/Upload/product4.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10006, 2, N'Jubilee black', 81000, N'#000000', N'~/Admin/Upload/product5.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10007, 1, N'JazzMaster', 93000, N'#000000', N'~/Admin/Upload/featured1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10008, 1, N'Ingersoll', 22000, N'#000000', N'~/Admin/Upload/featured2.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10009, 1, N'Rosegold', 79000, N'#000000', N'~/Admin/Upload/featured3.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10010, 3, N'Longines rose', 85000, N'#000000', N'~/Admin/Upload/new1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10011, 3, N'JazzMaster', 110000, N'#000000', N'~/Admin/Upload/new2.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10012, 3, N'Dreyfuss gold', 66000, N'#000000', N'~/Admin/Upload/new3.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10013, 3, N'Portuguese rose', 139000, N'#000000', N'~/Admin/Upload/new4.png', N'this watch is awesome ', N'Active')
+SET IDENTITY_INSERT [dbo].[product] OFF

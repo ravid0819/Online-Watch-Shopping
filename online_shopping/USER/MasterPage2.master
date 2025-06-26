@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="USER_MasterPage3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+       <title></title>
+    <style>
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'poppins','Sans Serif Collection';
+    }
+    body {
+        background-color:lightsteelblue;
+    }
+    .box {
+        display:flex;   
+        padding:21px 30px;
+        background-color:white;
+        box-shadow:0px 0px 5px 0.5px;
+        flex-direction: column;
+        padding-top:30px;
+        gap:27px;
+        border-radius:10px;
+        width:400px;
+    }
+    .box-items {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        gap:25px
+    }
+    .link{
+        flex-direction:row;
+        align-items: center;
+        gap:10px;
+    }
+    .text-box {    
+        height: 45px;
+        padding:3px 10px;
+        width: 100%;
+        border: 1px white solid;
+        border-radius: 7px;
+        background-color: #75757557;
+        font-size:16px;
+        border:none;
+    }
+    .btn {
+        border:none;
+        font-size:18px;
+        padding:1px 10px;
+        height: 45px;
+        width: 100%;
+        border: 1px white solid;
+        border-radius: 7px;
+        background-color: dodgerblue;
+        color:white;
+         cursor:pointer;
+
+    }
+    .logo {
+        height:80px;
+        border-radius:25%;
+    }
+    .hell {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:97vh;
+    }
+    .text-box:hover{
+        /*background-color: #e8f0fe;*/
+    }
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿SET IDENTITY_INSERT [dbo].[product] ON
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10000, 2, N'JazzMaster', 79000, N'#000000', N'~/Admin/Upload/featured1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10001, 2, N'Spirit rose', 127000, N'#000000', N'~/Admin/Upload/product1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10002, 2, N'Ingersoll', 21000, N'#000000', N'~/Admin/Upload/featured2.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10003, 2, N'Khaki pilot', 115000, N'#000000', N'~/Admin/Upload/product2.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10004, 2, N'Jubilee black', 75000, N'#000000', N'~/Admin/Upload/product3.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10005, 2, N'Jubilee black', 55000, N'#000000', N'~/Admin/Upload/product4.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10006, 2, N'Jubilee black', 81000, N'#000000', N'~/Admin/Upload/product5.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10007, 1, N'JazzMaster', 93000, N'#000000', N'~/Admin/Upload/featured1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10008, 1, N'Ingersoll', 22000, N'#000000', N'~/Admin/Upload/featured2.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10009, 1, N'Rosegold', 79000, N'#000000', N'~/Admin/Upload/featured3.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10010, 3, N'Longines rose', 85000, N'#000000', N'~/Admin/Upload/new1.png', N'this is a awesome watch ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10011, 3, N'JazzMaster', 110000, N'#000000', N'~/Admin/Upload/new2.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10012, 3, N'Dreyfuss gold', 66000, N'#000000', N'~/Admin/Upload/new3.png', N'this watch is awesome ', N'Active')
+INSERT INTO [dbo].[product] ([product_id], [cat_id], [product], [price], [color], [image], [desc], [status]) VALUES (10013, 3, N'Portuguese rose', 139000, N'#000000', N'~/Admin/Upload/new4.png', N'this watch is awesome ', N'Active')
+SET IDENTITY_INSERT [dbo].[product] OFF

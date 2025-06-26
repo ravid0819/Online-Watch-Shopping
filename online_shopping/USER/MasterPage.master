@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="USER_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+        <!--=============== FAVICON ===============-->
+<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+<!--=============== BOXICONS ===============-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<!--=============== SWIPER CSS ===============--> 
+<!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
+
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.login {
+        height: 21px;
+    filter: invert(1);  
+}
+.main {
+    margin-top:27px;
+}
+.header {
+    background:white;
+}
+.bl {
+    color:black;
+}
+</style>
+  
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+         <!--==================== HEADER ====================-->
+ <header class="header" id="header">
+     <nav class="nav container">
+         <a href="#" class="nav__logo">
+             <i class='bx bxs-watch nav__logo-icon'></i> Rolex
+         </a>
+
+         <div class="nav__menu" id="nav-menu">
+             <ul class="nav__list">
+                 <li class="nav__item">
+                     <asp:HyperLink ID="HyperLink3" runat="server" CssClass="nav__link" NavigateUrl="~/USER/Home.aspx#home">Home</asp:HyperLink>
+                 </li>
+                 <li class="nav__item">
+                     <asp:HyperLink ID="HyperLink4" runat="server" CssClass="nav__link" NavigateUrl="~/USER/Home.aspx#featured">featured</asp:HyperLink>
+                 </li>
+                 <li class="nav__item">
+                     <asp:HyperLink ID="HyperLink5" runat="server" CssClass="nav__link" NavigateUrl="~/USER/Home.aspx#products">products</asp:HyperLink>
+                 </li>
+                 <li class="nav__item">
+                     <asp:HyperLink ID="HyperLink6" runat="server" CssClass="nav__link" NavigateUrl="~/USER/Home.aspx#new">new</asp:HyperLink>
+                 </li>
+
+             </ul>
+
+             <div class="nav__close" id="nav-close">
+                 <i class='bx bx-x' ></i>
+             </div>
+         </div>
+
+         <div class="nav__btns">
+             <!-- Theme change button -->
+             <a href="login_page.aspx" id="login" runat="server" class="bl">Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i></a>
+               
+             <asp:HyperLink ID="HyperLink1" runat="server" CssClass="bx " NavigateUrl="~/USER/login_page.aspx"><img src="assets/img/login.png" class="login"/></asp:HyperLink>
+             <asp:HyperLink ID="HyperLink2" runat="server" CssClass="bx " NavigateUrl="~/USER/cart.aspx"><img src="assets/img/cart.png" class="login"/></asp:HyperLink>
+
+             <div class="nav__toggle" id="nav-toggle">
+                 <i class='bx bx-grid-alt' ></i>
+             </div>
+         </div>
+     </nav>
+ </header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+            <h3 class="footer__title">Our information</h3>
+
+            <ul class="footer__list">
+                <li>1234 - Peru</li>
+                <li>La Libertad 43210</li>
+                <li>123-456-789</li>
+            </ul>
+        </div>
+        <div class="footer__content">
+            <h3 class="footer__title">About Us</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">Support Center</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Customer Support</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Copy Right</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Product</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">Road bikes</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Mountain bikes</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Electric</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Accesories</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Social</h3>
+
+            <ul class="footer__social">
+                <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+
+                <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <span class="footer__copy">&#169; Bedimcode. All rigths reserved</span>
+</footer>
+
+    </div>
+    </form>
+</body>
+</html>
